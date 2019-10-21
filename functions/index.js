@@ -21,5 +21,24 @@ exports.getBasicAssembly = functions.https.onRequest((req, res) => {
     })
     .catch(err => console.error(err));
 });
+
+exports.createBasicAssembly = functions.https.onRequest((req, res) => {
+  const newBA = {
+    body: req.body.body,
+    BANo: req.body.BANo
+  };
+
+  admin
+    .firestore()
+    .collection('BasicAssembly')
+    .add(newBA)
+    .then(doc => {
+      res.json({ message: `document ${doc.id} created successfully` });
+    })
+    .catch(err => {
+      res.status(500).json({ error: 'something went wrong' });
+      console.error(err);
+    });
+});
 // // Create and Deploy Your First Cloud Functions
 // // https://firebase.google.com/docs/functions/write-firebase-functions
