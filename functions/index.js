@@ -68,6 +68,12 @@ app.post('/signup', (req, res) => {
   };
 
   //validation
+  let errors = {};
+
+  let token, userrId;
+  if (isEmpty(newUser.email)) {
+    errors.email = 'Email must not be empty';
+  }
 
   firebase
     .auth()
@@ -76,6 +82,26 @@ app.post('/signup', (req, res) => {
       return res
         .status(201)
         .json({ message: `user ${data.user.uid} signed up successfully` });
+    })
+    .catch(err => {
+      console.error(err);
+      return res.status(500).json({ error: err.code });
+    });
+});
+
+app.post('/login', (req, res) => {
+  const userdetails = {
+    email: req.body.email,
+    password: req.body.password
+  };
+
+  firebase
+    .auth()
+    .signInWithEmailAndPassword(userdetails.email, userdetails.password)
+    .then(data => {
+      return res.status(201).json({
+        message: `user ${data.userdetails.email} successfully logged in`
+      });
     })
     .catch(err => {
       console.error(err);
