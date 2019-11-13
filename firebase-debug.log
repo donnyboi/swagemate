@@ -1,0 +1,49 @@
+[debug] [2019-11-13T10:11:20.723Z] ----------------------------------------------------------------------
+[debug] [2019-11-13T10:11:20.725Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2019-11-13T10:11:20.725Z] CLI Version:   7.7.0
+[debug] [2019-11-13T10:11:20.726Z] Platform:      darwin
+[debug] [2019-11-13T10:11:20.726Z] Node Version:  v10.16.3
+[debug] [2019-11-13T10:11:20.731Z] Time:          Wed Nov 13 2019 21:11:20 GMT+1100 (Australian Eastern Daylight Time)
+[debug] [2019-11-13T10:11:20.731Z] ----------------------------------------------------------------------
+[debug] [2019-11-13T10:11:20.731Z] 
+[debug] [2019-11-13T10:11:20.740Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-11-13T10:11:20.740Z] > authorizing via signed-in user
+[debug] [2019-11-13T10:11:20.740Z] [iam] checking project test-e4f2e for permissions ["firebase.projects.get"]
+[debug] [2019-11-13T10:11:20.742Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/test-e4f2e:testIamPermissions  
+
+[debug] [2019-11-13T10:11:22.149Z] <<< HTTP RESPONSE 200
+[debug] [2019-11-13T10:11:22.151Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/test-e4f2e  
+ 
+[debug] [2019-11-13T10:11:22.749Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/donbopearachchi/Documents/Apps/swagemate'...
+[info] 
+[warn] ⚠  Your requested "node" version "8" doesn't match your global version "10"
+[info] ✔  functions: Emulator started at http://localhost:5000
+[info] i  functions: Watching "/Users/donbopearachchi/Documents/Apps/swagemate/functions" for Cloud Functions...
+[debug] [2019-11-13T10:11:23.054Z] [worker-~diagnostic~-20be3d50-9d34-463a-8be6-860233bdb36a]: BUSY
+[debug] [2019-11-13T10:11:23.337Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/donbopearachchi/Documents/Apps/swagemate/functions","node_version":"10.16.3"}
+[debug] [2019-11-13T10:11:23.339Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-13T10:11:23.343Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.7.0","resolution":"/Users/donbopearachchi/Documents/Apps/swagemate/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-13T10:11:23.345Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/donbopearachchi/Documents/Apps/swagemate/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-13T10:11:23.346Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/donbopearachchi/Documents/Apps/swagemate/node_modules/firebase-functions/lib/index.js"}
+[info] ✔  functions[api]: http function initialized (http://localhost:5000/test-e4f2e/us-central1/api).
+[debug] [2019-11-13T10:11:23.948Z] [worker-~diagnostic~-20be3d50-9d34-463a-8be6-860233bdb36a]: exited
+[debug] [2019-11-13T10:11:23.948Z] [worker-~diagnostic~-20be3d50-9d34-463a-8be6-860233bdb36a]: FINISHED
+[debug] [2019-11-13T10:11:24.967Z] Accepted request POST /test-e4f2e/us-central1/api/signup --> api
+[debug] [2019-11-13T10:11:24.971Z] [worker-api-3e43bfa0-7249-4d69-a550-6760272d3bcd]: BUSY
+[debug] [2019-11-13T10:11:25.249Z] [runtime-status] Functions runtime initialized. {"cwd":"/Users/donbopearachchi/Documents/Apps/swagemate/functions","node_version":"10.16.3"}
+[debug] [2019-11-13T10:11:25.251Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-13T10:11:25.253Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.7.0","resolution":"/Users/donbopearachchi/Documents/Apps/swagemate/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-13T10:11:25.254Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/donbopearachchi/Documents/Apps/swagemate/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-13T10:11:25.255Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/donbopearachchi/Documents/Apps/swagemate/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-13T10:11:25.630Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-11-13T10:11:25.631Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-11-13T10:11:25.631Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-11-13T10:11:25.638Z] {"socketPath":"/var/folders/vk/07gj022x11gdqm1fxv68dp6r0000gn/T/firebase_emulator_invocation_7290.sock"}
+[debug] [2019-11-13T10:11:25.639Z] [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/vk/07gj022x11gdqm1fxv68dp6r0000gn/T/firebase_emulator_invocation_7290.sock"}
+[debug] [2019-11-13T10:11:25.667Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-13T10:11:25.950Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "api" in ~4s
+[debug] [2019-11-13T10:11:29.745Z] [worker-api-3e43bfa0-7249-4d69-a550-6760272d3bcd]: IDLE
