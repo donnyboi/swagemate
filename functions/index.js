@@ -5,7 +5,7 @@ const app = require('express')();
 const firebase = require('firebase');
 var serviceAccount = require('./cred.json');
 var request = require('request');
-//var serviceAccount = require('../cred.json');
+const { reliefValve } = require('./reliefValve.js');
 
 const firebaseConfig = {
   apiKey: 'AIzaSyBSrqaKsYqxKQF1Mb9UtB6E6WD5uSa1ja0',
